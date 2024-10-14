@@ -18,8 +18,8 @@ var englishToPersianMap = map[rune]rune{
 func EnglishToPersian(input string) string {
 	var result strings.Builder
 	for _, char := range input {
-		if engChar, found := englishToPersianMap[char]; found {
-			result.WriteRune(engChar)
+		if persChar, found := englishToPersianMap[char]; found {
+			result.WriteRune(persChar)
 		} else {
 			result.WriteRune(char)
 		}
